@@ -5,123 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
     <title>Unit 3 - Learning Games</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #8B7355 0%, #A0522D 50%, #8B4513 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .header {
-            margin-bottom: 40px;
-            color: #F5F5DC;
-        }
-        
-        .header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        .back-button {
-            display: inline-block;
-            background: linear-gradient(145deg, #D2B48C, #DEB887);
-            color: #654321;
-            text-decoration: none;
-            padding: 12px 25px;
-            border-radius: 25px;
-            margin-bottom: 20px;
-            transition: all 0.3s ease;
-            border: 2px solid #8B7355;
-        }
-        
-        .back-button:hover {
-            background: linear-gradient(145deg, #E6D3B3, #F0E68C);
-            transform: translateY(-2px);
-        }
-        
-        .games-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-        }
-        
-        .game-tile {
-            background: linear-gradient(145deg, #D2B48C, #DEB887);
-            border-radius: 15px;
-            padding: 30px 20px;
-            text-decoration: none;
-            color: #654321;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-            border: 2px solid #8B7355;
-        }
-        
-        .game-tile:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
-            background: linear-gradient(145deg, #E6D3B3, #F0E68C);
-        }
-        
-        .game-tile h2 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: #8B4513;
-        }
-        
-        .game-tile p {
-            font-size: 1rem;
-            opacity: 0.8;
-        }
-        
-        .footer {
-            margin-top: 50px;
-            color: #F5F5DC;
-            opacity: 0.8;
-        }
-        
-        @media (max-width: 768px) {
-            .games-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .header h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../styles.css">
 </head>
-<body>
-    <div class="container">
-        <div class="header">
-            <a href="../index.html" class="back-button">← Back to Units</a>
+<body class="unit-page">
+    <div class="unit-container">
+        <div class="unit-header">
+            <a href="../games.html" class="back-button">← Back to Units</a>
             <h1>Unit 3</h1>
             <p>Interactive Learning Games</p>
         </div>
-        
-        <div class="games-grid">
-            <a href="game_1.html" class="game-tile">
-                <h2>Dirrmoong gilijing-ni</h2>
-                <p>Click to play this learning game</p>
-            </a>
+
+        <div class="game-type-section">
+            <div class="game-type-header">
+                Match up (4 games)
+            </div>
+            <div class="games-grid">
+                <a href="game_1.html" class="game-tile">
+                    <div class="game-type-badge">Match up</div>
+                    <h3>3.1 Spatial adverbs</h3>
+                    <p>Click to play this match up game</p>
+                </a>
+                <a href="game_2.html" class="game-tile">
+                    <div class="game-type-badge">Match up</div>
+                    <h3>3.2 BE/STAY + Locative</h3>
+                    <p>Click to play this match up game</p>
+                </a>
+                <a href="game_3.html" class="game-tile">
+                    <div class="game-type-badge">Match up</div>
+                    <h3>3.3.1 BE/STAY + nominal-LOC</h3>
+                    <p>Click to play this match up game</p>
+                </a>
+                <a href="game_4.html" class="game-tile">
+                    <div class="game-type-badge">Match up</div>
+                    <h3>3.3.32 BE/STAY + nominal-LOC</h3>
+                    <p>Click to play this match up game</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="game-type-section">
+            <div class="game-type-header">
+                Type the answer (1 games)
+            </div>
+            <div class="games-grid">
+                <a href="game_5.html" class="game-tile">
+                    <div class="game-type-badge">Type the answer</div>
+                    <h3>3.4 Locative inflection</h3>
+                    <p>Click to play this type the answer game</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="game-type-section">
+            <div class="game-type-header">
+                Labelled diagram (5 games)
+            </div>
+            <div class="games-grid">
+                <a href="game_6.html" class="game-tile">
+                    <div class="game-type-badge">Labelled diagram</div>
+                    <h3>Picture scene 11 (unit 3)</h3>
+                    <p>Click to play this labelled diagram game</p>
+                </a>
+                <a href="game_7.html" class="game-tile">
+                    <div class="game-type-badge">Labelled diagram</div>
+                    <h3>Picture scene 12 (unit 3)</h3>
+                    <p>Click to play this labelled diagram game</p>
+                </a>
+                <a href="game_8.html" class="game-tile">
+                    <div class="game-type-badge">Labelled diagram</div>
+                    <h3>Picture scene 13 (unit 3)</h3>
+                    <p>Click to play this labelled diagram game</p>
+                </a>
+                <a href="game_9.html" class="game-tile">
+                    <div class="game-type-badge">Labelled diagram</div>
+                    <h3>Picture scene 14 (unit 3)</h3>
+                    <p>Click to play this labelled diagram game</p>
+                </a>
+                <a href="game_10.html" class="game-tile">
+                    <div class="game-type-badge">Labelled diagram</div>
+                    <h3>Picture scene 15 (unit 3)</h3>
+                    <p>Click to play this labelled diagram game</p>
+                </a>
+            </div>
         </div>
         
-        <div class="footer">
+        <div class="games-footer">
             <p>&copy; 2024 Educational Learning Platform</p>
         </div>
     </div>

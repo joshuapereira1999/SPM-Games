@@ -1,0 +1,602 @@
+/* Educational Earth Tones Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(135deg, #8B7355 0%, #A68A64 25%, #C4A484 50%, #D4C4A8 75%, #E8DCC0 100%);
+    min-height: 100vh;
+    color: #3D2914;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.hero-section {
+    width: 100%;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(61, 41, 20, 0.3);
+    background: #F5F1E8;
+    padding: 20px;
+    position: relative;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    max-height: 700px;
+    object-fit: contain;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+    transform: scale(1.02);
+}
+
+.button-section {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: auto;
+    max-width: 600px;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.btn {
+    padding: 18px 36px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: none;
+    letter-spacing: 0.5px;
+    width: auto;
+    min-width: 200px;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #6B4423 0%, #8B5A2B 50%, #A67C52 100%);
+    color: #F5F1E8;
+    box-shadow: 0 6px 20px rgba(107, 68, 35, 0.4);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #5A3A1F 0%, #7A4F26 50%, #966B47 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(107, 68, 35, 0.5);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #4A6741 0%, #5D7A54 50%, #7A9B6F 100%);
+    color: #F5F1E8;
+    box-shadow: 0 6px 20px rgba(74, 103, 65, 0.4);
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(135deg, #3F5637 0%, #526B49 50%, #6B8A5F 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(74, 103, 65, 0.5);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(61, 41, 20, 0.3);
+}
+
+/* Educational decorative elements */
+.container::before {
+    content: '';
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(139, 115, 85, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(196, 164, 132, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 60%, rgba(212, 196, 168, 0.1) 0%, transparent 50%);
+    z-index: -1;
+    animation: float 20s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    33% { transform: translate(30px, -30px) rotate(120deg); }
+    66% { transform: translate(-20px, 20px) rotate(240deg); }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .hero-section {
+        padding: 15px;
+        margin-bottom: 30px;
+    }
+    
+    .btn {
+        padding: 15px 30px;
+        font-size: 16px;
+    }
+    
+            .button-section {
+            max-width: 90%;
+            flex-direction: column;
+            bottom: 15px;
+        }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+    
+    .hero-section {
+        padding: 10px;
+    }
+}
+
+/* ===== GAME TILES AND UNIT PAGES STYLING ===== */
+
+/* Main games page styling */
+.games-page {
+    background: linear-gradient(135deg, #8B7355 0%, #A0522D 50%, #8B4513 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.games-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.games-header {
+    margin-bottom: 40px;
+    color: #F5F5DC;
+}
+
+.games-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.games-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.units-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.unit-tile {
+    background: linear-gradient(145deg, #D2B48C, #DEB887);
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-decoration: none;
+    color: #654321;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border: 2px solid #8B7355;
+}
+
+.unit-tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    background: linear-gradient(145deg, #E6D3B3, #F0E68C);
+}
+
+.unit-tile h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #8B4513;
+}
+
+.unit-tile p {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* Unit page styling */
+.unit-page {
+    background: linear-gradient(135deg, #8B7355 0%, #A0522D 50%, #8B4513 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.unit-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.unit-header {
+    margin-bottom: 40px;
+    color: #F5F5DC;
+}
+
+.unit-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.unit-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Game type sections */
+.game-type-section {
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.game-type-header {
+    background: linear-gradient(145deg, #A67C52, #8B5A2B);
+    color: #F5F5DC;
+    padding: 15px 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Game tiles grid */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.game-tile {
+    background: linear-gradient(145deg, #D2B48C, #DEB887);
+    border-radius: 15px;
+    padding: 25px 20px;
+    text-decoration: none;
+    color: #654321;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border: 2px solid #8B7355;
+    position: relative;
+    overflow: hidden;
+}
+
+.game-tile::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.game-tile:hover::before {
+    left: 100%;
+}
+
+.game-tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    background: linear-gradient(145deg, #E6D3B3, #F0E68C);
+}
+
+.game-tile h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #8B4513;
+    line-height: 1.3;
+    position: relative;
+    z-index: 1;
+}
+
+.game-tile p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    position: relative;
+    z-index: 1;
+}
+
+.game-type-badge {
+    display: inline-block;
+    background: linear-gradient(145deg, #A67C52, #8B5A2B);
+    color: #F5F5DC;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 1;
+}
+
+/* Back button styling */
+.back-button {
+    display: inline-block;
+    background: linear-gradient(145deg, #D2B48C, #DEB887);
+    color: #654321;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    border: 2px solid #8B7355;
+    font-weight: 600;
+}
+
+.back-button:hover {
+    background: linear-gradient(145deg, #E6D3B3, #F0E68C);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* Footer styling */
+.games-footer {
+    margin-top: 50px;
+    color: #F5F5DC;
+    opacity: 0.8;
+}
+
+/* Individual game page styling */
+.game-page {
+    background: #ffffff;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    padding-top: 40px; /* Space for fixed header */
+    padding-bottom: 20px; /* Space for footer */
+}
+
+.game-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(139, 115, 85, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 5px 20px;
+    text-align: center;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+.game-header h1 {
+    font-size: 1.2rem;
+    margin-bottom: 2px;
+    color: #F5F5DC;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.game-back-button {
+    display: inline-block;
+    background: linear-gradient(145deg, #D2B48C, #DEB887);
+    color: #654321;
+    text-decoration: none;
+    padding: 4px 12px;
+    border-radius: 15px;
+    margin-bottom: 4px;
+    transition: all 0.3s ease;
+    border: 2px solid #8B7355;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.game-back-button:hover {
+    background: linear-gradient(145deg, #E6D3B3, #F0E68C);
+    transform: translateY(-2px);
+}
+
+.game-container {
+    width: 100%;
+    height: calc(100vh - 60px); /* Maximum space for game content */
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    overflow: hidden;
+}
+
+.game-content {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(139, 115, 85, 0.95);
+    backdrop-filter: blur(10px);
+    color: #F5F5DC;
+    text-align: center;
+    padding: 4px;
+    font-size: 0.6rem;
+    opacity: 0.9;
+}
+
+/* Make the game content fill the entire page */
+.game-container * {
+    max-width: 100vw !important;
+    max-height: 100vh !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+/* Ensure embedded content takes full space */
+.game-container iframe {
+    width: 100% !important;
+    height: calc(100vh - 50px) !important; /* Give iframe more height */
+    border: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.game-container embed,
+.game-container object,
+.game-container video {
+    width: 100% !important;
+    height: 100% !important;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove any default margins from game content */
+.game-container div,
+.game-container p,
+.game-container img {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Ensure images scale properly */
+.game-container img {
+    max-width: 100vw !important;
+    max-height: 100vh !important;
+    object-fit: contain;
+}
+
+/* Responsive design for game pages */
+@media (max-width: 768px) {
+    .games-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .unit-header h1,
+    .games-header h1 {
+        font-size: 2rem;
+    }
+    
+    .units-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .game-tile h3 {
+        font-size: 1.1rem;
+    }
+    
+    .game-tile {
+        padding: 20px 15px;
+    }
+    
+    /* Adjust game container for mobile */
+    .game-container {
+        top: 70px;
+        height: calc(100vh - 100px);
+    }
+    
+    .game-header {
+        padding: 8px 15px;
+    }
+    
+    .game-header h1 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .unit-page,
+    .games-page {
+        padding: 15px;
+    }
+    
+    .game-tile {
+        padding: 15px 10px;
+    }
+    
+    .game-tile h3 {
+        font-size: 1rem;
+    }
+    
+    .game-type-badge {
+        font-size: 0.7rem;
+        padding: 3px 8px;
+    }
+    
+    /* Further adjust game container for small mobile */
+    .game-container {
+        top: 60px;
+        height: calc(100vh - 80px);
+    }
+    
+    .game-header {
+        padding: 6px 10px;
+    }
+    
+    .game-header h1 {
+        font-size: 1rem;
+    }
+    
+    .game-back-button {
+        padding: 4px 12px;
+        font-size: 0.7rem;
+    }
+}
