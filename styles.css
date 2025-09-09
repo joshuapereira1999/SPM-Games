@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Arial', Helvetica, sans-serif;
     background: linear-gradient(135deg, #8B7355 0%, #A68A64 25%, #C4A484 50%, #D4C4A8 75%, #E8DCC0 100%);
     min-height: 100vh;
     color: #3D2914;
